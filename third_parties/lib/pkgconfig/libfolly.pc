@@ -1,0 +1,12 @@
+prefix=/home/samvel/dev/third_parties
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libfolly
+Description: Facebook (Folly) C++ library
+Version: 0.57
+Requires:  gflags openssl libevent
+Libs.private: -lboost_context -lboost_program_options -lboost_thread -lboost_filesystem -lboost_system -lboost_regex -lpthread -lboost_chrono   -lbz2 -lzstd -lz -lsnappy -ldl  -ldouble-conversion -lglog 
+Libs: -L${libdir} -lfolly
+Cflags: -I${includedir} -std=gnu++1y
